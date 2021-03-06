@@ -4,19 +4,37 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 
 They'd like a data engineer to create an Apache Cassandra database which can create queries on song play data to answer the questions, and wish to bring you on the project. Your role is to create a database for this analysis. You'll be able to test your database by running queries given to you by the analytics team from Sparkify to create the results.
 
-## Datasets
+## Dataset
+For this project, you'll be working with one dataset: event_data.
+The directory of CSV files partitioned by date. Here are examples of filepaths
+to two files in the dataset:
 
-For this project, you'll be working with one dataset: event_data. The directory of CSV files partitioned by date. Here are examples of filepaths to two files in the dataset:
+```
+event_data/2018-11-08-events.csv
+event_data/2018-11-09-events.csv
+```
 
-event_data/2018-11-08-events.csv event_data/2018-11-09-events.csv Project Template To get started with the project, go to the workspace on the next page, where you'll find the project template (a Jupyter notebook file). You can work on your project and submit your work through this workspace.
+## Tables
+
+Design tables to answer these three queries:
+
+1. Give me the artist, song title and song's length in the music app history
+that was heard during  sessionId = 338 and itemInSession  = 4.
+
+2. Give me only the following: name of artist, song (sorted by itemInSession)
+and user (first and last name) for userid = 10, sessionid = 182.
+
+3. Give me every user name (first and last) in my music app history who
+listened to the song 'All Hands Against His Own'.
+
+Remember, with Apache Cassandra you model the database tables on the queries
+you want to run.
+
 
 ## The project template includes one Jupyter Notebook file, in which:
 
 You will process the event_datafile_new.csv dataset to create a denormalized dataset you will model the data tables keeping in mind the queries you need to run you have been provided queries that you will need to model your data tables for you will load the data into tables you create in Apache Cassandra and run your queries Project Steps Below are steps you can follow to complete each component of this project.
 
-## Tasks
-
-Modeling your NoSQL database or Apache Cassandra database Design tables to answer the queries outlined in the project template Write Apache Cassandra CREATE KEYSPACE and SET KEYSPACE statements Develop your CREATE statement for each of the tables to address each question Load the data with INSERT statement for each of the tables Include IF NOT EXISTS clauses in your CREATE statements to create tables only if the tables do not already exist. We recommend you also include DROP TABLE statement for each table, this way you can run drop and create tables whenever you want to reset your database and test
 
 ## ETL pipeline
 
